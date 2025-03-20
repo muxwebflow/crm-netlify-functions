@@ -37,9 +37,9 @@ exports.handler = async (event, context) => {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "x-trackbox-username": process.env.CRM_USERNAME,  // "MediaB"
-        "x-trackbox-password": process.env.CRM_PASSWORD,  // "86FdgwtY_[C[Y<[$b"
-        "x-api-key": process.env.CRM_API_KEY              // npr. "2643889w34df345676ssdas323tgc738"
+        "x-trackbox-username": process.env.CRM_USERNAME,  
+        "x-trackbox-password": process.env.CRM_PASSWORD,  
+        "x-api-key": process.env.CRM_API_KEY             
       },
       body: JSON.stringify(payload)
     });
