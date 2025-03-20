@@ -30,7 +30,7 @@ exports.handler = async (event, context) => {
     console.log("Payload:", payload);
 
     // 5) Definišemo CRM endpoint – koristimo system_url iz podataka klijenta
-    const crmUrl = "https://affiliates.vipaccess24.com/api/signup/procform";
+    const crmUrl = "https://affiliates.vipaccess24.com;
 
     // 6) Šaljemo POST zahtev ka CRM endpoint-u
     const response = await fetch(crmUrl, {
