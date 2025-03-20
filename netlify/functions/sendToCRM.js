@@ -6,9 +6,9 @@ exports.handler = async (event, context) => {
     // 2) Kredencijale iz environment varijabli (na Netlify-u)
     const username = process.env.CRM_USERNAME;
     const password = process.env.CRM_PASSWORD;
-    const ai = process.env.CRM_AI || 2958032;
-    const ci = process.env.CRM_CI || 1;
-    const gi = process.env.CRM_GI || 17;
+    const ai = process.env.CRM_AI;
+    const ci = process.env.CRM_CI;
+    const gi = process.env.CRM_GI;
 
     // 3) Sastavi payload
     const payload = {
