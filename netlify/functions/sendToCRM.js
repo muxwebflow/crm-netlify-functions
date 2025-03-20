@@ -14,6 +14,8 @@ exports.handler = async (event, context) => {
     // Formiranje payload-a; koristimo defaultPassword umesto podataka koje šalje korisnik
     const payload = {
       ai: ai,
+      ci: ci,
+      gi: gi,
       firstname: data.firstName,
       lastname: data.lastName,
       email: data.email,
