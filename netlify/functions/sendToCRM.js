@@ -4,11 +4,11 @@ exports.handler = async (event, context) => {
     const data = JSON.parse(event.body);
 
     // 2) Uzimamo kredencijale iz environment varijabli
-    const username = process.env.CRM_USERNAME; // "MediaB"
-    const password = process.env.CRM_PASSWORD; // "86FdgwtY_[C[Y<[$b"
-    const ai = process.env.CRM_AI;             // "2958032"
-    const ci = process.env.CRM_CI;             // "1"
-    const gi = process.env.CRM_GI;             // "17"
+    const username = process.env.CRM_USERNAME; 
+    const password = process.env.CRM_PASSWORD; 
+    const ai = process.env.CRM_AI;            
+    const ci = process.env.CRM_CI;             
+    const gi = process.env.CRM_GI;             
 
     // 3) Ako je moguće, uzimamo IP korisnika iz header-a
     const userip = (event.headers && event.headers['x-forwarded-for']) || "";
