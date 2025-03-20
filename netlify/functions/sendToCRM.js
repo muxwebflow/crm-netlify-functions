@@ -27,7 +27,7 @@ exports.handler = async (event, context) => {
   phone: data.phone,
   lg: "EN",
   so: process.env.CRM_SO || "funnelname",     // Dodajte ako je potrebno
-  campaign: process.env.CRM_CAMPAIGN || "odgovarajuća kampanja"  // Dodajte vrednost koja je podešena u CRM-u
+  campaign: process.env.CRM_CAMPAIGN || "Campaign 1"  // Dodajte vrednost koja je podešena u CRM-u
 };
 
     
