@@ -15,19 +15,21 @@ exports.handler = async (event, context) => {
     // Uzimanje IP adrese – eventualno dopunite kako odgovara vašim potrebama
     const userip = (event.headers && event.headers['x-forwarded-for']) || "";
 
-    // Formiranje kompletnog payload-a
     const payload = {
-      ai: ai,
-      ci: ci,
-      gi: gi,
-      userip: userip,
-      firstname: data.firstName,
-      lastname: data.lastName,
-      email: data.email,
-      password: defaultPassword, // obavezno polje, postavljeno server-side
-      phone: data.phone,
-      lg: "EN"
-    };
+  ai: process.env.CRM_AI,   
+  ci: process.env.CRM_CI,   
+  gi: process.env.CRM_GI,   
+  userip: userip,          
+  firstname: data.firstName,
+  lastname: data.lastName,
+  email: data.email,
+  password: process.env.CRM_DEFAULT_PASSWORD || "Aa12345!",
+  phone: data.phone,
+  lg: "EN",
+  so: process.env.CRM_SO || "funnelname",     // Dodajte ako je potrebno
+  campaign: process.env.CRM_CAMPAIGN || "odgovarajuća kampanja"  // Dodajte vrednost koja je podešena u CRM-u
+};
+
     
     const response = await fetch("https://affiliates.sniperaccess.com/api/signup/procform", {
       method: "POST",
