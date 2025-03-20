@@ -7,9 +7,9 @@ exports.handler = async (event, context) => {
     const username = process.env.CRM_USERNAME; // npr. "MediaB"
     const password = process.env.CRM_PASSWORD; // npr. "86FdgwtY_[C[Y<[$b"
     const apiKey   = process.env.CRM_API_KEY;   // npr. "2643889w34df345676ssdas323tgc738"
-    const ai       = process.env.CRM_AI || "2958032";
-    const ci       = process.env.CRM_CI || "1";
-    const gi       = process.env.CRM_GI || "17";
+    const ai       = process.env.CRM_AI;
+    const ci       = process.env.CRM_CI;
+    const gi       = process.env.CRM_GI;
     
     // Ostale opcione vrednosti – ako nisu definisane, koristiš default vrednosti:
     const so       = process.env.CRM_SO || "funnelname";
