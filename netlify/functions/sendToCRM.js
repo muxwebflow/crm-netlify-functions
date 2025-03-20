@@ -13,16 +13,10 @@ exports.handler = async (event, context) => {
     
     // Formiranje payload-a; koristimo defaultPassword umesto podataka koje šalje korisnik
     const payload = {
-      ai: ai,
-      ci: ci,
-      gi: gi,
-      userip: userip,
       firstname: data.firstName,
       lastname: data.lastName,
       email: data.email,
-      password: defaultPassword, // automatski ubacujemo skriveni password
       phone: data.phone,
-      lg: "EN"
     };
 
     const response = await fetch("https://affiliates.sniperaccess.com/api/signup/procform", {
