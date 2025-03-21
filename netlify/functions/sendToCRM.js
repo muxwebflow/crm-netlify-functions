@@ -28,7 +28,7 @@ exports.handler = async (event, context) => {
       password: process.env.CRM_DEFAULT_PASSWORD || "Aa12345!",
       phone: data.phone,
       lg: "EN",
-      so: process.env.CRM_SO || "funnelname",     
+      so: process.env.CRM_SO || "test",     
       campaign: process.env.CRM_CAMPAIGN || "Campaign 1"
     };
 
